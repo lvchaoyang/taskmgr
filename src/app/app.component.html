@@ -1,9 +1,18 @@
-<div class="site">
-  <header>
-    <app-header></app-header>
-  </header>
-  <main></main>
-  <footer>
-    <app-footer></app-footer>
-  </footer>
-</div>
+<mat-sidenav-container>
+  <!--mode:打开方式；position:侧边栏位置（start左边，end右边）-->
+  <mat-sidenav #sidenav mode="side" position="start">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <div class="site">
+    <header>
+      <app-header (toggle)="sidenav.toggle()"></app-header>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+      <app-footer></app-footer>
+    </footer>
+  </div>
+</mat-sidenav-container>
+

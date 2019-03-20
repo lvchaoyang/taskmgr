@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.sass']
 })
 export class FooterComponent implements OnInit {
-
+  nowTime;
   constructor() { }
 
   ngOnInit() {
+    setInterval(() => {
+      this.nowTime = new Date();
+    }, 1000);
   }
 
 }
